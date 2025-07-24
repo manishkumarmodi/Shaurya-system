@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Shield, Lock, User } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProductCard from "@/components/ProductCard";
 import TricolorCursor from "@/components/TricolorCursor";
 // import LoginSection from "@/components/LoginSection";
@@ -91,7 +92,7 @@ const Index = () => {
             <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
                 <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors duration-200">Home</button>
-                <a href="/products" className="text-foreground hover:text-primary transition-colors duration-200">Products</a>
+                <Link to="/products" className="text-foreground hover:text-primary transition-colors duration-200">Products</Link>
                 <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-200">About</button>
                 <button onClick={() => scrollToSection('login')} className="text-foreground hover:text-primary transition-colors duration-200">Login</button>
                 <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors duration-200">Contact</button>
@@ -122,7 +123,7 @@ const Index = () => {
           <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/50">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button onClick={() => scrollToSection('home')} className="block px-3 py-2 text-foreground hover:text-primary">Home</button>
-              <a href="/products" className="block px-3 py-2 text-foreground hover:text-primary">Products</a>
+              <Link to="/products" className="block px-3 py-2 text-foreground hover:text-primary">Products</Link>
               <button onClick={() => scrollToSection('about')} className="block px-3 py-2 text-foreground hover:text-primary">About</button>
               <button onClick={() => scrollToSection('login')} className="block px-3 py-2 text-foreground hover:text-primary">Login</button>
               <button onClick={() => scrollToSection('contact')} className="block px-3 py-2 text-foreground hover:text-primary">Contact</button>
@@ -281,11 +282,11 @@ const Index = () => {
       <section id="login" className="py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
         <h2 className="text-3xl font-bold mb-6 text-center text-white">Login to Shaurya Systems</h2>
         <p className="text-gray-300 mb-8 text-center max-w-xl">Access secure features and manage your defense innovations by logging in to your account.</p>
-        <a href="/login">
+        <Link to="/login">
           <button className="bg-gradient-to-r from-saffron to-orange-600 hover:from-saffron/90 hover:to-orange-600/90 text-white py-3 px-8 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
             Go to Login
           </button>
-        </a>
+        </Link>
       </section>
 
       {/* Contact/Quick Inquiry Section */}
