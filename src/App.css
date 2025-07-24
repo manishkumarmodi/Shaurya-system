@@ -1,0 +1,78 @@
+/* Snake Tricolor Cursor Segments */
+.tricolor-cursor-segment {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  will-change: left, top, opacity;
+}
+.tricolor-cursor-segment.clicking {
+  transform: scale(0.8);
+  box-shadow: 0 0 16px 4px #ff9933aa, 0 0 0 2px #13880899;
+}
+/* Custom Tricolor Cursor Styles */
+.tricolor-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  background: conic-gradient(
+    from 0deg,
+    #ff9933 0deg 120deg,
+    #ffffff 120deg 240deg,
+    #138808 240deg 360deg
+  );
+  box-shadow: 0 0 8px 2px #fff7, 0 0 0 2px #fff3;
+  border: 2px solid #fff;
+  transition: transform 0.1s;
+}
+.tricolor-cursor.clicking {
+  transform: scale(0.8);
+  box-shadow: 0 0 16px 4px #ff9933aa, 0 0 0 2px #13880899;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
